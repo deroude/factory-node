@@ -1,6 +1,6 @@
 FROM alpine
  
-ENV ANSIBLE_VERSION 2.5.0
+ENV ANSIBLE_VERSION 2.7.0
  
 ENV BUILD_PACKAGES \
   bash \
@@ -65,3 +65,5 @@ ENV ANSIBLE_LIBRARY /ansible/library
 WORKDIR /ansible/playbooks
  
 ENTRYPOINT ["ansible-playbook"]
+
+# docker run --rm -it -v D:/staging/spring-mysql:/ansible/playbooks -v D:/staging/spring-mysql-target:/target factory/ansible-playbook app.yml
